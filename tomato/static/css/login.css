@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-image: url("/static/image/into.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Styling for the box */
+  .box {
+    width: 60vw;
+    height: 90vh;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Top section */
+  .cont2 {
+    height: 20%;
+    background-color: #192e1c;
+    color: rgb(248, 240, 230);
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Bottom section */
+  .cont1 {
+    height: 90%;
+    padding: 20px;
+    background-color: #e4eae5;
+    overflow-y: auto;
+  }
+  
+  .cont1 h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cont1 p {
+    margin: 10px 0 5px;
+  }
+  
+  .cont1 input[type="text"],
+  .cont1 input[type="email"],
+  .cont1 input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #togglePassword {
+    margin: 10px 5px 0 0;
+  }
+  
+  .cont1 label {
+    margin-bottom: 10px;
+  }
+  
+  .cont1 button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(26, 45, 37);
+    border: none;
+    border-radius: 8px;
+    color: rgb(244, 230, 214);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  
