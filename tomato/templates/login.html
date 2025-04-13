@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <div class="box">
+        <div class="cont2">
+            <h2>New Here?</h2>
+            <p>Your dedication feeds our communities.
+                <br> Connect, learn, and grow with us!
+            </p>
+        </div>
+
+        <div class="cont1">
+            <h1>LOGIN TO YOUR ACCOUNT</h1>
+            <form action="{{ url_for('signup') }}" method="POST">
+                <p>Name</p>
+                <input name="username" type="text" placeholder="Enter your name" required>
+                <p>Email</p>
+                <input name="email" type="email" placeholder="email@gmail.com" required>
+                <p>Password</p>
+                <input name="password" type="password" placeholder="password" id="passwordInput" required>
+                <input type="checkbox" id="togglePassword"> Show Password
+
+                <button type="submit" id="loginButton">LOGIN</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("togglePassword");
+        const password = document.getElementById("passwordInput");
+      
+        toggle.addEventListener("change", () => {
+          password.type = toggle.checked ? "text" : "password";
+        });
+      </script>
+      
+</body>
+</html>

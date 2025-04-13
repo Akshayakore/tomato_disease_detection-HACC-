@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Disease Classifier</title>
+    <link rel="stylesheet" href="/static/css/disease_prediction.css">
+    <script src="{{ url_for('static', filename='js/fertilizers.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Upload Crop Image</h2>
+            <form action="{{ url_for('predict_disease') }}" method="post" enctype="multipart/form-data">
+                <label for="crop">Select Crop:</label>
+                <select name="crop" id="crop" required>
+                    <option value="tomato">Tomato</option>
+                    <option value="corn">Corn</option>
+                    <option value="watermelon">Watermelon</option>
+                </select>
+
+                <label for="image">Upload Image:</label>
+                <input type="file" name="image" id="image" accept="image/*" required>
+
+                <button type="submit">Classify</button>
+            </form>
+        </div>
+
+        <div class="right">
+            {% if prediction %}
+                <h2>Prediction: {{ prediction }}</h2>
+                <img src="{{ url_for('static', filename=img_path.split('/')[-1]) }}" alt="Uploaded Image" class="uploaded-image">
+
+                <div class="suggestions">
+                    <h3>Fertilizer Suggestions:</h3>
+                    <ul>
+                        <li>{{ fertilizer }}</li>
+                    </ul>
+
+                    <h3>Precautions:</h3>
+                    <ul>
+                        <li>{{ precaution }}</li>
+                    </ul>
+                </div>
+            {% else %}
+                <h2>No prediction yet</h2>
+                <p>Please upload an image to start diagnosis.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

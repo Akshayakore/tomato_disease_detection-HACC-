@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+    <div class="desc">
+        <div class="logo">
+            <img src="/static/image/applogo.jpg" alt="Description of image">
+       </div>
+         <p>LEAFLOGIC</p>
+    </div>
+    <div class="nav">
+        <div class="home">
+        <i class="fa-solid fa-house"></i>
+        <p>HOME</p>
+    </div>
+        <P>ABOUT</P>
+        <P>CONTACT US</P>
+        <p>SIGN-IN</p>
+        <div class="search">
+        <input placeholder="search">
+        <button><i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="logout">LOG-OUT</button>
+    </div>
+    </div>
+
+
+    <div class="cont">
+        <div class="box">
+            <img src="/static/image/box1.jpg">
+            <div class="box-content">
+                <h3>Disease Detection</h3>
+                <p>You can click the photo of the leaf and upload it to check for the disease and the fertilizers to be use. </p>
+                <a href="{{ url_for('predict_disease') }}">
+                    <button>Detect Now</button>
+                </a>
+            </div>
+        </div>
+        
+        
+
+        
+    </div>
+    
+    <div class="btn">
+      <a href="{{ url_for('Chatbot') }}" >
+        <button >Chatbot</button>
+      </a>
+    </div>
+</body>
+</html>
